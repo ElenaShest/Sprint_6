@@ -11,5 +11,8 @@
 3. test_order_page - файл с тестами заказа
    4. test_create_order_order_button_header_success - тест проверки создания заказа через кнопку "Заказать" в заголовке страницы
    5. test_create_order_order_button_down_success - тест проверки создания заказа через кнопку "Заказать" в конце страницы
+6. test_header_page - файл с тестами переходов по ссылке
+   7. test_click_logo_scooter_follow_link_main - тест перехода по логотипу скутера на главную
+   8. test_click_logo_ya_redirect_dzen - тест перехода по логотипу Яндекса на страницу Дзена
 
 Папка allure_results содержит отчет по прогону тестов

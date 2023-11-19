@@ -1,4 +1,3 @@
-import time
 import random
 
 import allure
@@ -15,7 +14,7 @@ class OrderPage(BasePage):
     def click_to_order_button_header(self):
         self.click_to_element(GeneralLocators.ORDER_BUTTON_HEADER)
 
-    @allure.step("Проскроллить до кнопки 'Заказать'")
+    @allure.step("Проскроллить до кнопки 'Заказать' внизу страницы")
     def scroll_to_order_button_down(self):
         self.scroll_to_element(MainPageLocators.ORDER_BUTTON_DOWN)
         return self.find_definite_element(MainPageLocators.ORDER_BUTTON_DOWN)
@@ -106,24 +105,6 @@ class OrderPage(BasePage):
     @allure.step("Проверить, что перешли на страницу заказа")
     def check_order_page(self):
         return self.find_definite_element(OrderPageLocators.CANCEL_BUTTON)
-
-    @allure.step("Кликнуть на логотип 'Самокат'")
-    def click_to_logo_scooter(self):
-        self.click_to_element(GeneralLocators.LOGO_SCOOTER)
-
-    @allure.step("Проверить, что перешли на главную страницу")
-    def check_main_page(self):
-        return self.find_definite_element(MainPageLocators.HEADER_ON_MAIN)
-
-    @allure.step("Кликнуть по логотипу 'Яндекс'")
-    def click_to_logo_ya(self):
-        self.click_to_element(GeneralLocators.LOGO_YA)
-
-    @allure.step("Проверить, что открылась новая вкладка Дзен")
-    def check_redirect_dzen(self):
-        self.redirect_new_tab()
-        return self.find_definite_element(GeneralLocators.DZEN_HEADER)
-
 
     def create_order(self, name, lastname, address, phone, date, comment):
         self.set_name_to_field(name)
