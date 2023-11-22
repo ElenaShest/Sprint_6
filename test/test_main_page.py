@@ -1,3 +1,4 @@
+import allure
 import pytest
 from pages.main_page import MainPage
 
@@ -12,6 +13,8 @@ class TestMainPage:
                                                     (6, "Да, пока самокат не привезли. Штрафа не будет, объяснительной записки тоже не попросим. Все же свои."),
                                                     (7, "Да, обязательно. Всем самокатов! И Москве, и Московской области.")
                                                     ])
+    @allure.title("Проверка вопросов и ответов на главной")
+    @allure.description("Проверка, что ответы соответствуют заявленным")
     def test_check_questions_and_answers(self, browser, num, result):
         main_page = MainPage(browser)
         main_page.click_to_cookie_button()
